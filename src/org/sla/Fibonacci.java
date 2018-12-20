@@ -4,58 +4,27 @@ class Fibonacci implements Runnable {
     private int start1;
     private int start2;
     private int amount;
-    private boolean launched;
 
-    private boolean recursiveMode;
-
-    Fibonacci (int a, int b, int c) {
-    a = b;
-    b = c;
-    c = a + b;
-
-
-
+    Fibonacci(int a, int b, int c) {
+        start1 = a;
+        start2 = b;
+        amount = c;
     }
 
-    boolean launched() {
-        return launched;
-    }
+    private void writeString() {
+        for (int i = 0; i < amount; i = i + 1) {
+            int sum = start1 + start2;
+            System.out.println(start1);
+            System.out.println(start2);
 
-    /*private void countdownIterative() {
-        for (int i = launchTime; i > 0; i--) {
-            System.out.println("Sequence " + id + " is " + i + ".");
-            try {
-                // wait 1 second (which is same as 1000 milliseconds)
-                Thread.sleep(1000);
-            } catch (InterruptedException ex) {
-                Thread.currentThread().interrupt();
-            }
+            start1 = start2;
+            start2 = sum;
+            System.out.println(sum);
         }
-        canLaunch = true;*/
     }
-
-    /*private void countdownRecursive(int count) {
-        if (count > 0) {
-            System.out.println("Rocket " + id + " launching in " + count + " seconds.");
-            try {
-                // wait 1 second (which is same as 1000 milliseconds)
-                Thread.sleep(1000);
-            } catch (InterruptedException ex) {
-                Thread.currentThread().interrupt();
-            }
-            countdownRecursive(count - 1);
-        } else {
-            canLaunch = true;
-        }
-    }*/
 
     public void run() {
         System.out.println("Sequence will be computed.");
-        /*if (recursiveMode) {
-            countdownRecursive(launchTime);
-        } else {
-            countdownIterative();
-        }
-        launch();*/
+        writeString();
     }
 }
