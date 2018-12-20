@@ -12,14 +12,14 @@ class Fibonacci implements Runnable {
     }
 
     private void writeString() {
-        for (int i = 0; i < amount; i = i + 1) {
+        System.out.println(start1);
+        System.out.println(start2);
+        for (int i = 2; i < amount; i = i + 1) {
             int sum = start1 + start2;
-            System.out.println(start1);
-            System.out.println(start2);
+            System.out.println(sum);
 
             start1 = start2;
             start2 = sum;
-            System.out.println(sum);
         }
     }
 

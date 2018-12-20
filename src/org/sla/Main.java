@@ -3,10 +3,9 @@ package org.sla;
 public class Main {
 
     public static void main(String[] args) {
-        boolean recursiveMode = true;
         int sequence = 2;
 
-        System.out.println("The computer will compute " + sequence + " sequences of the Fibonacci sequence in" + (recursiveMode ? " recursively." : " iteratively."));
+        System.out.println("The computer will compute " + sequence + " sequences of the Fibonacci sequence");
         System.out.println("");
 
         // Let's compute the fibonacci sequence
