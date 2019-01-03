@@ -10,8 +10,9 @@ public class Main {
 
         // Let's compute the fibonacci sequence
         for (int i = 0; i < sequence; i++) {
-            Fibonacci fibonacci = new Fibonacci(2, 5, 7);
-            fibonacci.run();
+            Fibonacci fibonacci = new Fibonacci((int)(Math.random()*100), 5, 7);
+            Thread thread = new Thread(fibonacci);
+            thread.start();
         }
 
         System.out.println("All sequences were computed successfully!");
